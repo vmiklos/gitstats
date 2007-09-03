@@ -139,6 +139,14 @@ print >>out, """</table>
        </tr>
        <tr>
         <td bgcolor="%(heading)s">
+         Total commits:
+        </td>
+        <td align="right" bgcolor="%(rowcolor1)s">
+         %(numcommits)s
+        </td>
+       </tr>
+       <tr>
+        <td bgcolor="%(heading)s">
          Most frequently modified file:
         </td>
         <td align="right" bgcolor="%(rowcolor1)s">
@@ -184,5 +192,6 @@ print >>out, """</table>
 		'highfile': highfile,
 		'highnum': highnum,
 		'highcommitter': cgi.escape(highcommitter),
-		'highcommits': highcommits
+		'highcommits': highcommits,
+		'numcommits': numcommits
 	}
