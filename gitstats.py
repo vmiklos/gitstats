@@ -54,6 +54,8 @@ for i in buf:
 		continue
 	elif i.startswith("Author:"):
 		author = i[8:-1]
+		if author in config.aliases.keys():
+			author = config.aliases[author]
 		if author not in lines.keys():
 			lines[author] = 0
 		if author not in commits.keys():

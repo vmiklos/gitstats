@@ -8,3 +8,4 @@ class config:
 	foreground = '#000000'
 
 	ignore = []
+	aliases = {}
