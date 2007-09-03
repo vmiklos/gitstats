@@ -2,9 +2,10 @@ import os, sys, re, cgi
 from config import config
 
 repo = sys.argv[1]
+out = open(sys.argv[2], "w")
 reponame = os.path.basename(repo)
 
-print """<html>
+print >>out, """<html>
  <head>
   <title>%(reponame)s git statistics</title>
  </head>
@@ -91,16 +92,16 @@ for i in committers:
 		highcommits = number
 		highcommitter = i
 	if count % 2 == 1:
-		print '<tr bgcolor="%s">' % config.rowcolor2
+		print >>out, '<tr bgcolor="%s">' % config.rowcolor2
 	else:
-		print '<tr bgcolor="%s">' % config.rowcolor1
-	print "<td>%s</td>" % cgi.escape(i)
-	print "<td>%s</td>" % number
-	print "<td>%s</td>" % changes
-	print "<td>%s</td>" % average
-	print "<td>%s%%</td>" % percent
+		print >>out, '<tr bgcolor="%s">' % config.rowcolor1
+	print >>out, "<td>%s</td>" % cgi.escape(i)
+	print >>out, "<td>%s</td>" % number
+	print >>out, "<td>%s</td>" % changes
+	print >>out, "<td>%s</td>" % average
+	print >>out, "<td>%s%%</td>" % percent
 	count += 1
-print """</table>
+print >>out, """</table>
       <table bgcolor="%(border)s" cellspacing="1" cellpadding="2" width="100%%">
        <tr>
         <td bgcolor="%(heading)s">
