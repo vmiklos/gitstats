@@ -1,4 +1,5 @@
 import os, sys, re, cgi
+sys.path.append(".")
 from config import config
 
 repo = sys.argv[1]
