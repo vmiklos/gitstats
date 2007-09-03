@@ -54,6 +54,8 @@ $ python /path/to/gitstats.py ~/git/myrepo.git output.html
 - Alias support, so that your stats are not lost when you change your mail
   address.
 
+- Total number of commits.
+
 == What needs to be done (aka. TODO)
 
 - None at this time.
