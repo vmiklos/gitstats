@@ -79,6 +79,8 @@ committers = commits.keys()
 committers.sort()
 count = 0
 for i in committers:
+	if i in config.ignore:
+		continue
 	number = commits[i]
 	changes = lines[i]
 	percent = int((float(changes)/numlines)*100)

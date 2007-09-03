@@ -6,3 +6,5 @@ class config:
 	rowcolor2 = '#AADDAA'
 	font = 'Verdana, Helvetica'
 	foreground = '#000000'
+
+	ignore = []
