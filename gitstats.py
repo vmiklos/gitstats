@@ -1,13 +1,5 @@
 import os, sys, re, cgi
-
-class config:
-	heading = '#AAAAFF'
-	border = '#000000'
-	background = '#FFFFFF'
-	rowcolor1 = '#FFFFFF'
-	rowcolor2 = '#AADDAA'
-	font = 'Verdana, Helvetica'
-	foreground = '#000000'
+from config import config
 
 repo = sys.argv[1]
 reponame = os.path.basename(repo)
