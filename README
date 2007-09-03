@@ -1,0 +1,82 @@
+= Simple statistics generator for git
+Miklos Vajna <vmiklos@frugalware.org>
+
+== Status
+
+This project was originally a port of my
+http://ftp.frugalware.org/pub/other/darcsstats/[darcsstats] project to git. It
+worth to mention that it was originally inspired by Juli Mallett's
+http://people.FreeBSD.org/~jmallett/cvstat-5.0.tgz[cvstat].
+
+It supports all the features which are provided by `cvstat`, plus a number of
+extras. See the 'What works' section for a list of them.
+
+If you want something more complex, then try out
+http://tree.celinuxforum.org/gitstat/[gitstat]. It is a mix of php and perl,
+requires mysql, etc. Obviously it has more features, but you may say that it's
+bloated. Then `gitstats` is for you.
+
+== How to set it up
+
+You need to have a copy of `config.py` in the current dir. Probably you want to
+have a config for each project to set the aliases and ignores. Here is the
+format of ignores:
+
+----
+	ignore = ['A B <foo@server.com>', 'C D <bar@server.com>']
+----
+
+If you know Python, this will be familiar to you.
+
+The aliases directive is a Python dictionary:
+
+----
+	aliases = {
+			'X Y <old@server.com>': 'X Y <new@server.com>'
+			}
+----
+
+== Running it
+
+Then all you need is to run `gitstats`:
+
+----
+$ python /path/to/gitstats.py ~/git/myrepo.git output.html
+----
+
+== What works
+
+- Features supported by `cvstat`.
+
+- Ignore support. This is handy when you import a cvs project to git and there
+  were an `anonymous` user in cvs.
+
+- Alias support, so that your stats are not lost when you change your mail
+  address.
+
+== What needs to be done (aka. TODO)
+
+- Sort the table by '# of Changes'
+
+== I would like to have support for ...
+
+If something does not work and it's not in the TODO section, then please
+contact me!
+
+In fact, of course, I wrote this documentation after figured out how to do this
+setup, so maybe I left out some steps. If you needed 'any' additional tricks,
+then it would be nice to include them here.
+
+== Known bugs
+
+- None at this time.
+
+== Samples
+
+You can reach a sample http://frugalware.org/~vmiklos/stats/pacman-g2.git.html[here].
+
+== Changelog
+
+You can reach the Changelog link:Changelog[here].
+
+// vim: ft=asciidoc
