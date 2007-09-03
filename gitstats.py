@@ -23,6 +23,10 @@ import os, sys, re, cgi
 sys.path.append(".")
 from config import config
 
+def committer_cmp(a, b):
+	global commits
+	return cmp(commits[a], commits[b])
+
 repo = sys.argv[1]
 out = open(sys.argv[2], "w")
 reponame = os.path.basename(repo)
@@ -101,7 +105,7 @@ for i in buf:
 			highfile = file
 
 committers = commits.keys()
-committers.sort()
+committers.sort(cmp=committer_cmp, reverse=True)
 count = 0
 for i in committers:
 	if i in config.ignore:
