@@ -65,10 +65,6 @@ $ python /path/to/gitstats.py ~/git/myrepo.git output.html
 If something does not work and it's not in the TODO section, then please
 contact me!
 
-In fact, of course, I wrote this documentation after figured out how to do this
-setup, so maybe I left out some steps. If you needed 'any' additional tricks,
-then it would be nice to include them here.
-
 == Known bugs
 
 - None at this time.
