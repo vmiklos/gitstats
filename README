@@ -4,7 +4,7 @@ Miklos Vajna <vmiklos@vmiklos.hu>
 == Status
 
 This project was originally a port of my
-http://ftp.frugalware.org/pub/other/darcsstats/[darcsstats] project to git. It
+http://vmiklos.hu/project/darcsstats/[darcsstats] project to git. It
 worth to mention that it was originally inspired by Juli Mallett's
 http://people.FreeBSD.org/~jmallett/cvstat-5.0.tgz[cvstat].
 
