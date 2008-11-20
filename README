@@ -16,6 +16,10 @@ http://tree.celinuxforum.org/gitstat/[gitstat]. It is a mix of php and perl,
 requires mysql, etc. Obviously it has more features, but you may say that it's
 bloated. Then `gitstats` is for you.
 
+NOTE: These days I usually just use `git shortlog -s -n` if I want to
+get a toplist, so I no longer actively maintain this project. Patches
+are still welcome.
+
 == How to set it up
 
 You need to have a copy of `config.py` in the current dir. Probably you want to
