@@ -4,7 +4,7 @@ Miklos Vajna <vmiklos-at-vmiklos-dot-hu>
 == Status
 
 This project was originally a port of my
-http://vmiklos.hu/project/darcsstats/[darcsstats] project to git. It
+http://patch-tag.com/r/vmiklos/darcsstats[darcsstats] project to git. It
 worth to mention that it was originally inspired by Juli Mallett's
 http://people.FreeBSD.org/~jmallett/cvstat-5.0.tgz[cvstat].
 
@@ -77,8 +77,8 @@ contact me!
 
 You can reach a sample link:pacman-g2.html[here].
 
-== Changelog
+== Download
 
-You can reach the Changelog link:Changelog[here].
+From https://github.com/vmiklos/gitstats[GitHub].
 
 // vim: ft=asciidoc
